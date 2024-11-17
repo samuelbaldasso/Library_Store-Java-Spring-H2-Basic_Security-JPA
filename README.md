@@ -13,7 +13,10 @@
     - Spring Boot (REST API)
     - Spring Data JPA (Banco de dados)
     - Spring Security (Autenticação básica)
-    - Banco de dados H2 ou PostgreSQL
+    - Banco de dados H2
+    - Swagger (documentação das API´s)
+      
+      Acesse http://localhost:8080/swagger-ui/index.html em seu navegador para visualizar a documentação da API.
       
 - **Instruções de Instalação e Uso**:
 
