@@ -35,12 +35,8 @@ public class UserService {
         return userRepository.save(user);
     }
 
-    public Optional<User> findByEmail(String email) {
-        return Optional.ofNullable(userRepository.findByEmail(email));
-    }
-
     @Transactional
-    public User updateUser (Long userId, UserDTO updatedUser) {
+    public User updateUser(Long userId, UserDTO updatedUser) {
         User existingUser  = userRepository.findById(userId)
                 .orElseThrow(() -> new RuntimeException("User  not found"));
         existingUser.setUsername(updatedUser.getUsername());
@@ -54,7 +50,7 @@ public class UserService {
     }
 
     @Transactional
-    public void deleteUser (Long userId) {
+    public void deleteUser(Long userId) {
         userRepository.deleteById(userId);
     }
 
