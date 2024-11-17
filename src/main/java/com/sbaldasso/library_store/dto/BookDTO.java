@@ -1,20 +1,15 @@
-package com.sbaldasso.library_store.domain;
+package com.sbaldasso.library_store.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import jakarta.persistence.*;
-
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
-public class Book {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+public class BookDTO {
     private Long id;
 
     private String title;

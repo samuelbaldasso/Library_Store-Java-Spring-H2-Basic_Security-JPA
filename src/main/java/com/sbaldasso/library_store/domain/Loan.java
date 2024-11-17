@@ -6,22 +6,25 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import jakarta.persistence.*;
+import java.time.LocalDate;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Book {
+public class Loan {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String title;
+    @ManyToOne
+    private Book book;
 
-    private String author;
+    @ManyToOne
+    private User user;
 
-    private int yearPublished;
-
-    private boolean available;
+    private LocalDate startDate;
+    private LocalDate endDate;
+    private LoanStatus status;
 }
